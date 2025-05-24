@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/system_overview_diagram.png",
-        width: 800,
-        height: 600,
+        width: 1200,
+        height: 630,
         alt: "24-25J-216 Research System Overview Diagram",
       },
     ],
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/system_overview_diagram.png",
-        width: 800,
-        height: 600,
+        width: 1200,
+        height: 628,
         alt: "24-25J-216 Research System Overview Diagram",
       },
     ],
