@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "24-25J-216-Research",
   description: "LLM BASED MULTI-AGENT PLATFORM FOR WORKPLACE TASK AUTOMATION",
   generator: "Next.js",
-  applicationName: "24-25J-216-Research",
+  applicationName: "24-25J-216-Research-Website",
   authors: [
     {
       name: "24-25J-216",
