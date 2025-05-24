@@ -37,6 +37,7 @@ import {
   CheckCircle,
   Circle,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function ResearchWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -155,11 +156,17 @@ export default function ResearchWebsite() {
         <div className='container mx-auto px-4 py-4'>
           <div className='flex items-center justify-between'>
             <div className='flex items-center space-x-2'>
-              <div className='w-8 h-8 bg-gradient-to-br from-blue-900 to-purple-600 rounded-lg flex items-center justify-center'>
-                <Brain className='w-5 h-5 text-white' />
+              <div className='w-10 h-10 bg-gradient-to-br from-blue-900 to-purple-600 rounded-lg flex justify-center items-center p-2'>
+                <Image
+                  src='/images/logo_1.svg'
+                  alt='Logo'
+                  width={32}
+                  height={32}
+                  className='rounded-full'
+                />
               </div>
               <span className='font-bold text-blue-900 text-lg'>
-                LLM Research Project
+                24-25J-216 - Research Project
               </span>
             </div>
 
@@ -1443,10 +1450,18 @@ export default function ResearchWebsite() {
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <div className='flex items-center justify-center space-x-2 mb-6'>
-              <div className='w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center'>
-                <Brain className='w-5 h-5 text-white' />
+              <div className='w-10 h-10 p-2 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center'>
+                <Image
+                  src='/images/logo_1.svg'
+                  alt='Logo'
+                  width={32}
+                  height={32}
+                  className='rounded-full'
+                />
               </div>
-              <span className='font-bold text-xl'>LLM Research Project</span>
+              <span className='font-bold text-xl'>
+                24-25J-216 - Research Project
+              </span>
             </div>
             <p className='text-slate-400 mb-8'>
               Advancing the future of workplace automation through intelligent
