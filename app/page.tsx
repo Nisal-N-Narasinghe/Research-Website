@@ -38,7 +38,7 @@ import {
   Circle,
 } from "lucide-react";
 import Image from "next/image";
-
+import TechCarousel from "@/components/tech-carousel";
 export default function ResearchWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -108,10 +108,18 @@ export default function ResearchWebsite() {
   ];
 
   const milestones = {
+    taf: {
+      title: "TAF",
+      date: "March 15, 2024",
+      marks: "Pending",
+      status: "completed",
+      description:
+        "Initial project proposal with research objectives and methodology",
+    },
     proposal: {
       title: "Project Proposal",
       date: "March 15, 2024",
-      marks: "15%",
+      marks: "Pending",
       status: "completed",
       description:
         "Initial project proposal with research objectives and methodology",
@@ -119,33 +127,59 @@ export default function ResearchWebsite() {
     progress1: {
       title: "Progress Presentation-1",
       date: "May 20, 2024",
-      marks: "20%",
+      marks: "Pending",
       status: "completed",
       description:
         "First progress presentation covering literature review and initial development",
     },
+
     progress2: {
       title: "Progress Presentation-2",
       date: "August 15, 2024",
-      marks: "25%",
-      status: "in-progress",
+      marks: "Pending",
+      status: "completed",
       description:
         "Second progress presentation with system implementation and testing results",
     },
-    final: {
-      title: "Final Assessment",
-      date: "November 30, 2024",
-      marks: "30%",
-      status: "pending",
+    finalreport: {
+      title: "Final Report Submission",
+      date: "November 15, 2024",
+      marks: "Pending",
+      status: "completed",
       description:
-        "Final project assessment including complete system demonstration",
+        "Comprehensive project report including system design, implementation, and evaluation",
     },
-    viva: {
-      title: "Viva Voce",
-      date: "December 15, 2024",
-      marks: "10%",
-      status: "pending",
-      description: "Oral examination and project defense",
+    finalpresentation: {
+      title: "Final Presentation & Viva",
+      date: "November 20, 2024",
+      marks: "Pending",
+      status: "in-progress",
+      description:
+        "Final presentation summarizing project outcomes, challenges, and future work",
+    },
+    websiteassessment: {
+      title: "Website Assessment",
+      date: "December 5, 2024",
+      marks: "Pending",
+      status: "in-progress",
+      description:
+        "Evaluation of project website and documentation for completeness and clarity",
+    },
+    logbook: {
+      title: "Logbook Submission",
+      date: "December 10, 2024",
+      marks: "Pending",
+      status: "in-progress",
+      description:
+        "Submission of logbook documenting project progress, challenges, and solutions",
+    },
+    researchpaper: {
+      title: "Research Paper Submission",
+      date: "July 10, 2024",
+      marks: "Pending",
+      status: "in-progress",
+      description:
+        "Submission of research paper summarizing findings and contributions",
     },
   };
 
@@ -293,8 +327,10 @@ export default function ResearchWebsite() {
                 workplace task automation in the motor insurance industry. The
                 platform leverages advanced Large Language Models to coordinate
                 multiple intelligent agents, enabling seamless automation of
-                complex insurance workflows including claims processing,
-                underwriting, customer service, and compliance management. Our
+                complex insurance workflows including
+                Customer-Estimation-Crosschecking, Customer Risk Prediction,
+                Insurance Document Automation, Claim Process Automation & Fraud
+                Detection, and Vehicle Risk Prediction & Premium Adjustment. Our
                 solution addresses the critical need for intelligent automation
                 in insurance operations while maintaining high accuracy,
                 regulatory compliance, and operational efficiency.
@@ -312,7 +348,7 @@ export default function ResearchWebsite() {
               <Button
                 size='lg'
                 variant='outline'
-                className='border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300'
+                className='border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 bg-black/20 backdrop-blur-sm '
                 onClick={() => scrollToSection("milestones")}>
                 <Trophy className='w-5 h-5 mr-2' />
                 View Progress
@@ -348,7 +384,7 @@ export default function ResearchWebsite() {
                   <CardHeader>
                     <CardTitle className='flex items-center text-blue-900'>
                       <Bot className='w-5 h-5 mr-2' />
-                      LLM Applications in Enterprise
+                      Customer-Estimation-Crosschecking
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -364,7 +400,7 @@ export default function ResearchWebsite() {
                   <CardHeader>
                     <CardTitle className='flex items-center text-purple-600'>
                       <Network className='w-5 h-5 mr-2' />
-                      Multi-Agent System Architectures
+                      Customer Risk Prediction & Insurance Document Automation
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -379,8 +415,8 @@ export default function ResearchWebsite() {
                 <Card className='border-l-4 border-l-green-600 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1'>
                   <CardHeader>
                     <CardTitle className='flex items-center text-green-600'>
-                      <Car className='w-5 h-5 mr-2' />
-                      Insurance Industry Automation
+                      <Zap className='w-5 h-5 mr-2' />
+                      Claim Process Automation & Fraud Detection
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -395,15 +431,26 @@ export default function ResearchWebsite() {
                 <Card className='border-l-4 border-l-orange-600 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1'>
                   <CardHeader>
                     <CardTitle className='flex items-center text-orange-600'>
-                      <Zap className='w-5 h-5 mr-2' />
-                      Workflow Optimization Techniques
+                      <Car className='w-5 h-5 mr-2' />
+                      Vehicle Risk Prediction & Premium Adjustment
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className='text-slate-600'>
-                      Studies on intelligent workflow optimization, process
-                      automation techniques, and their impact on operational
-                      efficiency in complex business environments.
+                      Risk assessments are essential in vehicle insurance to
+                      predict potential claims. Research highlights the
+                      importance of machine learning and statistical methods in
+                      improving risk evaluation. Techniques like the Analytical
+                      Hierarchy Process (AHP) help categorize risks related to
+                      drivers, vehicles, and the environment, allowing insurers
+                      to prioritize key factors. Generalized Linear Models
+                      (GLMs), especially with gamma distribution, and K-means
+                      clustering enable detailed analysis by grouping similar
+                      risk profiles. These methods enhance accuracy in premium
+                      calculation by considering variables such as prior claims,
+                      vehicle models, and market value. Collectively, they
+                      support the development of efficient, transparent, and
+                      reliable insurance risk analysis systems.
                     </p>
                   </CardContent>
                 </Card>
@@ -422,9 +469,13 @@ export default function ResearchWebsite() {
                       Integration Challenges
                     </Badge>
                     <p className='text-slate-700'>
-                      Limited integration between LLM capabilities and
-                      multi-agent coordination in specialized insurance
-                      workflows and compliance requirements.
+                      Current insurance systems face a key gap in integrating
+                      LLMs with multi-agent coordination, limiting their ability
+                      to automate complex workflows. Without seamless
+                      interaction between language understanding and task
+                      execution, processes like fraud detection, risk analysis,
+                      and compliance remain inefficient, fragmented, and unable
+                      to adapt to dynamic regulatory and business needs.
                     </p>
                   </div>
                   <div className='text-center'>
@@ -432,9 +483,15 @@ export default function ResearchWebsite() {
                       Domain Specificity
                     </Badge>
                     <p className='text-slate-700'>
-                      Lack of specialized solutions for motor insurance task
-                      automation that address industry-specific regulations and
-                      business processes.
+                      Despite incremental digitalization, Sri Lanka’s
+                      motor-insurance sector still lacks a comprehensive, fully
+                      automated, multi-agent platform that unifies intelligent
+                      document handling, real-time fraud detection, and
+                      LLM-driven premium adjustment with vehicle-specific risk
+                      analysis; current tools remain siloed and rule-based,
+                      leaving a critical industry gap for the country’s first
+                      end-to-end solution that can autonomously coordinate every
+                      step of the claims and underwriting workflow.
                     </p>
                   </div>
                   <div className='text-center'>
@@ -442,9 +499,13 @@ export default function ResearchWebsite() {
                       Scalability Issues
                     </Badge>
                     <p className='text-slate-700'>
-                      Current systems struggle with enterprise-scale deployment,
-                      real-time decision making, and adaptive learning
-                      capabilities.
+                      Existing insurance automation systems lack the scalability
+                      needed for enterprise-wide deployment, often failing to
+                      support high-volume data processing, real-time
+                      decision-making, and adaptive learning. This results in
+                      performance bottlenecks, limited responsiveness to
+                      changing risk factors, and challenges in maintaining
+                      efficiency across large, dynamic operational environments.
                     </p>
                   </div>
                 </div>
@@ -461,12 +522,23 @@ export default function ResearchWebsite() {
                   <p className='text-lg text-slate-700 leading-relaxed text-center'>
                     The motor insurance industry faces significant challenges in
                     automating complex workflows due to the lack of intelligent
-                    coordination between different system components, manual
-                    processing inefficiencies, and limited adaptability to
-                    changing business requirements and regulatory compliance.
-                    Current automation solutions fail to provide the level of
-                    intelligence and coordination required for comprehensive
-                    workplace task automation in insurance operations.
+                    coordination between various functional components,
+                    dependency on manual document processing, vulnerability to
+                    fraudulent claim activities, and limited adaptability to
+                    dynamic risk factors and regulatory changes. Existing
+                    automation solutions often operate in silos and lack the
+                    cognitive capabilities needed to analyze unstructured data,
+                    detect anomalies, or make real-time decisions across
+                    interconnected processes. These limitations hinder the
+                    industry's ability to efficiently manage documents,
+                    accurately calculate premiums based on vehicle-associated
+                    risk, validate post-repair inspections, and cross-check
+                    customer estimates with actual repair data. This research
+                    investigates how AI-driven multi-agent systems can address
+                    these gaps by enabling intelligent, autonomous agents to
+                    collaboratively manage and optimize the end-to-end insurance
+                    workflow—enhancing accuracy, transparency, fraud prevention,
+                    and operational efficiency in motor insurance operations.
                   </p>
                 </CardContent>
               </Card>
@@ -479,10 +551,10 @@ export default function ResearchWebsite() {
               </h3>
               <div className='space-y-4'>
                 {[
-                  "Design and develop a scalable multi-agent architecture optimized for LLM integration in motor insurance workflows",
-                  "Implement intelligent task automation for claims processing, underwriting, and customer service operations",
-                  "Create seamless integration capabilities with existing insurance management systems and databases",
-                  "Achieve significant improvements in processing time, accuracy, and operational efficiency metrics",
+                  "Develop an automated document processing system and customer risk calculation model using advanced AI and machine learning techniques",
+                  "To develop a system that automates insurance claim submission using chatbot assistance, performs damage assessment from media files to estimate repair costs, and identifies potential fraud by analyzing behavioral patterns and verifying user and vehicle details through intelligent data analysis.",
+                  "Identifying risk levels associated with vehicle types and adjust the insurance premiums based on risk levels",
+                  "To develop a system that maintains an up-to-date database of vehicle spare parts and repair costs, while validating the integrity of customer-provided repair estimations to ensure accuracy, prevent overcharging, and support fair claim settlements",
                   "Validate the platform through comprehensive testing in real-world motor insurance scenarios",
                 ].map((objective, index) => (
                   <Card
@@ -506,6 +578,57 @@ export default function ResearchWebsite() {
               <h3 className='text-2xl font-bold text-blue-900 mb-8 text-center'>
                 Methodology
               </h3>
+              <Image
+                src='/images/system_overview_diagram.png'
+                alt='Methodology Diagram'
+                width={1200}
+                height={630}
+                className='mb-8'
+              />
+              <h5 className='text-xl font-semibold text-blue-900 text-center'>
+                The research methodology involves a systematic approach to
+                developing the multi-agent platform, including:
+              </h5>
+              <Card className='bg-gradient-to-r from-blue-50 to-purple-50 mb-4 mt-4'>
+                <CardContent className='p-8'>
+                  <div className='md:flex md:space-x-8 '>
+                    {/* Left side: List of components */}
+                    <ul className='list-disc list-inside text-slate-700 space-y-2 md:w-1/2 mb-6 md:mb-0'>
+                      <li>
+                        <strong>Customer- Estimation-Crosschecking</strong>
+                      </li>
+                      <li>
+                        <strong>
+                          Customer Risk Prediction & Insurance Document
+                          Automation
+                        </strong>
+                      </li>
+                      <li>
+                        <strong>
+                          Claim Process Automation & Fraud Detection
+                        </strong>
+                      </li>
+                      <li>
+                        <strong>
+                          Vehicle Risk Prediction & Premium Adjustment
+                        </strong>
+                      </li>
+                    </ul>
+
+                    {/* Right side: Description paragraph */}
+                    <p className='text-slate-600 text-left md:text-start md:w-1/2'>
+                      Each component will be developed using state-of-the-art
+                      technologies and integrated into a cohesive platform that
+                      enhances operational efficiency, accuracy, and fraud
+                      prevention in motor insurance processes. The platform will
+                      be validated through comprehensive testing in real-world
+                      scenarios, ensuring its effectiveness in automating
+                      complex insurance workflows.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
               <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
                 {[
                   {
@@ -578,57 +701,44 @@ export default function ResearchWebsite() {
               <h3 className='text-2xl font-bold text-blue-900 mb-8 text-center'>
                 Technologies Used
               </h3>
+              <TechCarousel />
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {[
                   {
                     category: "Large Language Models",
                     icon: Brain,
-                    technologies: [
-                      "GPT-4",
-                      "Claude",
-                      "LLaMA",
-                      "Custom Fine-tuning",
-                    ],
+                    technologies: ["GPT-4", "LLaMA", "Custom Fine-tuning"],
                   },
                   {
                     category: "Multi-Agent Frameworks",
                     icon: Network,
-                    technologies: [
-                      "LangChain",
-                      "AutoGen",
-                      "CrewAI",
-                      "Custom Agents",
-                    ],
+                    technologies: ["LangChain", "Custom Agents"],
                   },
                   {
                     category: "Backend Technologies",
                     icon: Settings,
-                    technologies: ["Python", "FastAPI", "PostgreSQL", "Redis"],
+                    technologies: ["Python", "Flask", "PostgreSQL", "Laravel"],
+                  },
+                  {
+                    category: "Frontend Technologies(Web & Mobile)",
+                    icon: Settings,
+                    technologies: [
+                      "React",
+                      "Vitejs",
+                      "TypeScript",
+                      "React Native",
+                      "Tailwind CSS",
+                    ],
                   },
                   {
                     category: "Cloud Infrastructure",
                     icon: Zap,
-                    technologies: ["AWS", "Docker", "Kubernetes", "Terraform"],
+                    technologies: ["GCP", "Docker", "Kubernetes", "Terraform"],
                   },
                   {
                     category: "Insurance Integration",
                     icon: Car,
-                    technologies: [
-                      "REST APIs",
-                      "SOAP Services",
-                      "EDI",
-                      "Custom Connectors",
-                    ],
-                  },
-                  {
-                    category: "Monitoring & Analytics",
-                    icon: Target,
-                    technologies: [
-                      "Prometheus",
-                      "Grafana",
-                      "ELK Stack",
-                      "Custom Dashboards",
-                    ],
+                    technologies: ["REST APIs", "POSTMAN", "Custom Connectors"],
                   },
                 ].map((tech, index) => (
                   <Card
