@@ -36,9 +36,11 @@ import {
   ExternalLink,
   CheckCircle,
   Circle,
+  Linkedin,
 } from "lucide-react";
 import Image from "next/image";
 import TechCarousel from "@/components/tech-carousel";
+import { link } from "fs";
 export default function ResearchWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -470,9 +472,20 @@ export default function ResearchWebsite() {
                   </CardHeader>
                   <CardContent>
                     <p className='text-slate-600'>
-                      Review of collaborative agent architectures, coordination
-                      mechanisms, and their application in insurance domain task
-                      automation and real-time decision-making.
+                      The insurance industry has advanced by integrating XGBoost
+                      with Llama 3.3 70B for customer risk prediction and Gemini
+                      1.5 Flash for document data extraction. XGBoost accurately
+                      predicts claims and identifies high-risk customers, while
+                      Llama 3.3 70B provides clear, natural language
+                      explanations, enhancing interpretability and regulatory
+                      compliance. Meanwhile, Gemini 1.5 Flash efficiently
+                      extracts key information from unstructured insurance
+                      documents, streamlining data processing. This unified
+                      workflow, combining XGBoost, Llama 3.3 70B, and Gemini 1.5
+                      Flash, offers a scalable, explainable, and efficient
+                      system for risk assessment and document automation,
+                      optimizing personalized premiums and operational
+                      efficiency in real-world insurance applications.
                     </p>
                   </CardContent>
                 </Card>
@@ -486,9 +499,20 @@ export default function ResearchWebsite() {
                   </CardHeader>
                   <CardContent>
                     <p className='text-slate-600'>
-                      Current state of automation in motor insurance industry,
-                      including claims processing, underwriting, customer
-                      service workflows, and regulatory compliance requirements.
+                      Recent advancements in insurance leverage AI, machine
+                      learning, and NLP for fraud detection and claim
+                      processing. Models like decision trees, neural networks,
+                      CNNs, SVMs, and ensemble methods show high accuracy,
+                      especially in detecting fraudulent claims and assessing
+                      damage from mobile images. Tools like VGG16, Mask R-CNN,
+                      and LDA support part localization and fraud
+                      identification. Large Language Models (LLMs) such as BERT
+                      and GPT analyze unstructured data to improve claim
+                      validation. However, integration across systems remains
+                      limited. Current research emphasizes the potential of
+                      unified LLM-based multi-agent frameworks to automate
+                      workflows, enhance fraud detection, and streamline the
+                      entire vehicle insurance claim process.
                     </p>
                   </CardContent>
                 </Card>
@@ -1248,37 +1272,64 @@ export default function ResearchWebsite() {
               {[
                 {
                   image: "/images/supervisor.jpg",
-                  name: "Dr. Samantha Rajapaksha",
+                  name: "Dr.Samantha Rajapaksha",
                   role: "",
-                  email: "",
+                  email: "samantha.r@sliit.lk",
                   expertise: "Supervisor",
                   achievements: [
-                    "Sri Lanka Institute of Information Technology",
+                    "Head | Department of Information Technology (SLIIT)",
+                    "Ph.D.(SLIIT)",
+                    "M.Sc.in IT (SLIIT)",
+                    "B.Sc.(Eng.) University of Moratuwa.",
                   ],
                   description:
-                    "Leading expert in LLM applications with extensive experience in enterprise AI solutions",
+                    "Semantic Web | Robotic Middleware | IOT | Algorithms related to Operating Systems",
+                  googleschScholar:
+                    "https://scholar.google.com/citations?hl=en&user=t1krVdkAAAAJ",
+                  linkedin:
+                    "https://www.linkedin.com/in/samantha-rajapaksha-528657b/",
+                  researchGate:
+                    "https://www.researchgate.net/profile/Samantha-Rajapaksha-2",
                 },
                 {
                   image: "/images/co_supervisor.jpg",
-                  name: "Dr. Sanvitha Kasthuriarachchi",
+                  name: "Dr.Sanvitha Kasthuriarachchi",
                   role: "",
-                  email: "",
+                  email: "sanvitha.k@sliit.lk",
                   expertise: "Co-Supervisor",
                   achievements: [
-                    "Sri Lanka Institute of Information Technology",
+                    "Assistant Professor | Faculty of Computing (SLIIT)",
+                    "PhD in Computer Science",
+                    "M.Sc. in Information Technology",
+                    "B.Sc. Special Hons in Information Technology",
                   ],
                   description:
-                    "Specialized in distributed systems and agent-based architectures for enterprise applications",
+                    "Big Data Analytics | Data Mining | Machine Learning",
+                  googleschScholar:
+                    "https://scholar.google.com/citations?user=0FZAXcMAAAAJ&hl=en",
+                  linkedin:
+                    "https://www.linkedin.com/in/sanvitha-kasthuriarachchi-31b50a37/",
+                  researchGate:
+                    "https://www.researchgate.net/profile/Sanvitha-Kasthuriarachchi-2",
                 },
                 {
                   image: "/images/external_supervisor.jpg",
                   name: "Mr. Lasitha Petthawadu",
                   role: "",
-                  email: "",
+                  email: "petthawadu3@gmail.com",
                   expertise: "External-Supervisor",
-                  achievements: ["Tetranyde (Pvt) Ltd."],
+                  achievements: [
+                    "Founder Tetranyde (Pvt) Ltd.",
+                    "Principal Software Architect",
+                    "Visiting Lecturer at SLIIT",
+                    "Visiting Lecturer at IIT",
+                    "MSc in Computer Science (University of Moratuwa)",
+                  ],
                   description:
-                    "Expert in insurance technology and automation with deep industry knowledge",
+                    "Principal Software Architect | Certified Blockchain Expert | CSM",
+                  googleschScholar: "#",
+                  linkedin: "https://www.linkedin.com/in/lasithapetthawadu/",
+                  researchGate: "#",
                 },
               ].map((member, index) => (
                 <Card
@@ -1290,7 +1341,7 @@ export default function ResearchWebsite() {
                         <img
                           src={member.image}
                           alt={member.name}
-                          className='w-16 h-16 rounded-full object-cover'
+                          className='w-20 h-20 rounded-full object-cover'
                         />
                       </div>
                       <h3 className='text-xl font-semibold mb-1'>
@@ -1326,6 +1377,61 @@ export default function ResearchWebsite() {
                           </li>
                         ))}
                       </ul>
+                      <div className='flex space-x-3 mt-4'>
+                        {member.googleschScholar && (
+                          <a
+                            href={member.googleschScholar}
+                            target='_blank'
+                            rel='noopener noreferrer'>
+                            <Button
+                              variant='outline'
+                              size='sm'
+                              className='text-blue-100 hover:bg-blue-200 hover:text-blue-900'>
+                              <span className='flex items-center gap-1'>
+                                <img
+                                  src='/images/google_scholar.png'
+                                  alt='Google Scholar'
+                                  className='w-4 h-4'
+                                />
+                              </span>
+                            </Button>
+                          </a>
+                        )}
+                        {member.linkedin && (
+                          <a
+                            href={member.linkedin}
+                            target='_blank'
+                            rel='noopener noreferrer'>
+                            <Button
+                              variant='outline'
+                              size='sm'
+                              className='text-blue-100 hover:bg-blue-200 hover:text-blue-900'>
+                              <span className='flex items-center gap-1'>
+                                <Linkedin className='w-4 h-4 text-black' />
+                              </span>
+                            </Button>
+                          </a>
+                        )}
+                        {member.researchGate && (
+                          <a
+                            href={member.researchGate}
+                            target='_blank'
+                            rel='noopener noreferrer'>
+                            <Button
+                              variant='outline'
+                              size='sm'
+                              className='text-blue-100 hover:bg-blue-200 hover:text-blue-900'>
+                              <span className='flex items-center gap-1'>
+                                <img
+                                  src='/images/researchgate.png'
+                                  alt='ResearchGate'
+                                  className='w-4 h-4'
+                                />
+                              </span>
+                            </Button>
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -1389,7 +1495,7 @@ export default function ResearchWebsite() {
                         <img
                           src={member.image}
                           alt={member.name}
-                          className='w-16 h-16 rounded-full object-cover'
+                          className='w-20 h-20 rounded-full object-cover'
                         />
                       </div>
                       <h3 className='text-xl font-semibold mb-1'>
