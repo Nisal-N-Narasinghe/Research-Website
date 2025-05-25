@@ -110,15 +110,15 @@ export default function ResearchWebsite() {
   const milestones = {
     taf: {
       title: "TAF",
-      date: "March 15, 2024",
+      date: "July 1, 2024",
       marks: "Pending",
       status: "completed",
       description:
         "Initial project proposal with research objectives and methodology",
     },
     proposal: {
-      title: "Project Proposal",
-      date: "March 15, 2024",
+      title: "Project Proposal Report",
+      date: "August 5, 2024",
       marks: "Pending",
       status: "completed",
       description:
@@ -126,7 +126,7 @@ export default function ResearchWebsite() {
     },
     progress1: {
       title: "Progress Presentation-1",
-      date: "May 20, 2024",
+      date: "December 4, 2024",
       marks: "Pending",
       status: "completed",
       description:
@@ -135,7 +135,7 @@ export default function ResearchWebsite() {
 
     progress2: {
       title: "Progress Presentation-2",
-      date: "August 15, 2024",
+      date: "March 19, 2025",
       marks: "Pending",
       status: "completed",
       description:
@@ -143,7 +143,7 @@ export default function ResearchWebsite() {
     },
     finalreport: {
       title: "Final Report Submission",
-      date: "November 15, 2024",
+      date: "April 11, 2025",
       marks: "Pending",
       status: "completed",
       description:
@@ -151,38 +151,103 @@ export default function ResearchWebsite() {
     },
     finalpresentation: {
       title: "Final Presentation & Viva",
-      date: "November 20, 2024",
+      date: "May 26, 2025",
       marks: "Pending",
-      status: "in-progress",
+      status: "pending",
       description:
         "Final presentation summarizing project outcomes, challenges, and future work",
     },
     websiteassessment: {
       title: "Website Assessment",
-      date: "December 5, 2024",
+      date: "May 26, 2025",
       marks: "Pending",
-      status: "in-progress",
+      status: "pending",
       description:
         "Evaluation of project website and documentation for completeness and clarity",
     },
-    logbook: {
-      title: "Logbook Submission",
-      date: "December 10, 2024",
-      marks: "Pending",
-      status: "in-progress",
-      description:
-        "Submission of logbook documenting project progress, challenges, and solutions",
-    },
     researchpaper: {
       title: "Research Paper Submission",
-      date: "July 10, 2024",
+      date: "June 2, 2025",
       marks: "Pending",
-      status: "in-progress",
+      status: "pending",
       description:
         "Submission of research paper summarizing findings and contributions",
     },
+    logbook: {
+      title: "Logbook Submission",
+      date: "June 9, 2025",
+      marks: "Pending",
+      status: "pending",
+      description:
+        "Submission of logbook documenting project progress, challenges, and solutions",
+    },
   };
-
+  const documents = [
+    {
+      title: "Topic Assessment",
+      status: "available",
+      date: "2021/02/25",
+      type: "PDF",
+      groupType: "Group",
+      link: "#",
+    },
+    {
+      title: "Project Charter",
+      status: "available",
+      date: "2021/02/25",
+      type: "PDF",
+      groupType: "Group",
+      link: "#",
+    },
+    {
+      title: "Project Proposal",
+      status: "available",
+      date: "2021/03/22",
+      type: "PDF",
+      groupType: "Individual",
+      link: "#",
+    },
+    {
+      title: "Status Documents I",
+      status: "available",
+      date: "2021/07/05",
+      type: "PDF",
+      groupType: "Individual",
+      link: "#",
+    },
+    {
+      title: "Status Documents II",
+      status: "pending",
+      date: "",
+      type: "PDF",
+      groupType: "Individual",
+      link: "#",
+    },
+    {
+      title: "Research Paper",
+      status: "pending",
+      date: "",
+      type: "PDF",
+      groupType: "Group",
+      link: "#",
+    },
+    {
+      title: "Final Report",
+      status: "available",
+      date: "2021/10/13",
+      type: "PDF",
+      groupType: "Group",
+      link: "#",
+    },
+    {
+      title: "Poster",
+      status: "available",
+      date: "2021/10/13",
+      type: "PDF",
+      groupType: "Group",
+      link: "#",
+    },
+  ];
   return (
     <div className='min-h-screen bg-white'>
       {/* Header */}
@@ -815,7 +880,7 @@ export default function ResearchWebsite() {
                       .status === "completed" ? (
                       <CheckCircle className='w-6 h-6 text-green-500 mr-3' />
                     ) : milestones[selectedMilestone as keyof typeof milestones]
-                        .status === "in-progress" ? (
+                        .status === "pending" ? (
                       <Clock className='w-6 h-6 text-blue-500 mr-3' />
                     ) : (
                       <Circle className='w-6 h-6 text-slate-400 mr-3' />
@@ -832,7 +897,7 @@ export default function ResearchWebsite() {
                         ? "default"
                         : milestones[
                             selectedMilestone as keyof typeof milestones
-                          ].status === "in-progress"
+                          ].status === "pending"
                         ? "secondary"
                         : "outline"
                     }
@@ -876,7 +941,7 @@ export default function ResearchWebsite() {
                       <div className='flex items-center text-slate-600'>
                         <Target className='w-4 h-4 mr-2' />
                         <span>
-                          Status:{" "}
+                          Status:
                           {milestones[
                             selectedMilestone as keyof typeof milestones
                           ].status
@@ -914,7 +979,7 @@ export default function ResearchWebsite() {
                     <div className='flex items-center justify-between mb-3'>
                       {milestone.status === "completed" ? (
                         <CheckCircle className='w-8 h-8 text-green-500' />
-                      ) : milestone.status === "in-progress" ? (
+                      ) : milestone.status === "pending" ? (
                         <Clock className='w-8 h-8 text-blue-500' />
                       ) : (
                         <Circle className='w-8 h-8 text-slate-400' />
@@ -933,7 +998,7 @@ export default function ResearchWebsite() {
                       variant={
                         milestone.status === "completed"
                           ? "default"
-                          : milestone.status === "in-progress"
+                          : milestone.status === "pending"
                           ? "secondary"
                           : "outline"
                       }
@@ -965,139 +1030,53 @@ export default function ResearchWebsite() {
             </div>
 
             <div className='grid md:grid-cols-2 gap-6'>
-              {[
-                {
-                  title: "Project Charter",
-                  description:
-                    "Initial project charter defining scope, objectives, and stakeholder requirements",
-                  type: "PDF",
-                  size: "1.2 MB",
-                  date: "February 2024",
-                  status: "available",
-                },
-                {
-                  title: "Proposal Document",
-                  description:
-                    "Comprehensive project proposal with detailed research methodology and timeline",
-                  type: "PDF",
-                  size: "3.4 MB",
-                  date: "March 2024",
-                  status: "available",
-                },
-                {
-                  title: "Literature Review Checklist",
-                  description:
-                    "Systematic checklist for literature review process and quality assurance",
-                  type: "PDF",
-                  size: "0.8 MB",
-                  date: "April 2024",
-                  status: "available",
-                },
-                {
-                  title: "System Design Document",
-                  description:
-                    "Detailed system architecture and design specifications",
-                  type: "PDF",
-                  size: "4.1 MB",
-                  date: "May 2024",
-                  status: "available",
-                },
-                {
-                  title: "Implementation Report",
-                  description:
-                    "Progress report on system implementation and development milestones",
-                  type: "PDF",
-                  size: "2.7 MB",
-                  date: "July 2024",
-                  status: "available",
-                },
-                {
-                  title: "Final Document (Main)",
-                  description:
-                    "Complete final project documentation with all research findings",
-                  type: "PDF",
-                  size: "8.5 MB",
-                  date: "November 2024",
-                  status: "pending",
-                },
-                {
-                  title: "Technical Appendix",
-                  description:
-                    "Technical appendix with code documentation and API references",
-                  type: "PDF",
-                  size: "3.2 MB",
-                  date: "November 2024",
-                  status: "pending",
-                },
-                {
-                  title: "User Manual",
-                  description:
-                    "Comprehensive user guide for platform operation and maintenance",
-                  type: "PDF",
-                  size: "2.1 MB",
-                  date: "November 2024",
-                  status: "pending",
-                },
-              ].map((doc, index) => (
-                <Card
+              {documents.map((doc, index) => (
+                <div
                   key={index}
-                  className='hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1'>
-                  <CardContent className='p-6'>
-                    <div className='flex items-start justify-between mb-4'>
-                      <div className='flex items-center space-x-3'>
-                        <div className='w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center'>
-                          <FileText className='w-5 h-5 text-blue-600' />
-                        </div>
-                        <div>
-                          <h3 className='font-semibold text-blue-900'>
-                            {doc.title}
-                          </h3>
-                          <div className='flex items-center space-x-2 text-sm text-slate-500'>
-                            <Badge variant='outline' className='text-xs'>
-                              {doc.type}
-                            </Badge>
-                            <span>•</span>
-                            <span>{doc.size}</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className='text-right'>
-                        <p className='text-sm text-slate-500 mb-2'>
-                          {doc.date}
-                        </p>
-                        <Badge
-                          variant={
-                            doc.status === "available" ? "default" : "outline"
-                          }
-                          className='text-xs'>
-                          {doc.status}
-                        </Badge>
-                      </div>
-                    </div>
-                    <p className='text-slate-600 text-sm mb-3'>
-                      {doc.description}
-                    </p>
-                    <Button
-                      size='sm'
-                      variant={
-                        doc.status === "available" ? "default" : "outline"
-                      }
-                      disabled={doc.status === "pending"}
-                      className='w-full'>
-                      {doc.status === "available" ? (
-                        <>
-                          <Download className='w-4 h-4 mr-2' />
-                          Download
-                        </>
-                      ) : (
-                        <>
-                          <Clock className='w-4 h-4 mr-2' />
-                          Pending
-                        </>
-                      )}
-                    </Button>
-                  </CardContent>
-                </Card>
+                  className='bg-white shadow-sm rounded-lg border border-slate-200 hover:shadow-md transition p-4 flex flex-col justify-between'>
+                  <div className='flex items-center space-x-2 mb-3'>
+                    <FileText className='w-5 h-5 text-red-500' />
+                    <h2 className='text-lg font-semibold text-slate-800'>
+                      {doc.title}
+                    </h2>
+                  </div>
+
+                  <p className='text-sm text-slate-600 mb-1'>
+                    {doc.date
+                      ? `Submitted on ${doc.date}`
+                      : "Yet to be submitted, link will be updated soon."}
+                  </p>
+
+                  <div className='flex justify-between items-center mt-auto pt-3 border-t border-slate-100'>
+                    <span className='text-sm text-slate-500'>
+                      {doc.groupType}
+                    </span>
+                    <a
+                      href={doc.link}
+                      target='_blank'
+                      rel='noopener noreferrer'>
+                      <button
+                        className={`text-sm flex items-center gap-1 ${
+                          doc.status === "available"
+                            ? "text-emerald-600 hover:underline"
+                            : "text-slate-400 cursor-not-allowed"
+                        }`}
+                        disabled={doc.status !== "available"}>
+                        {doc.status === "available" ? (
+                          <>
+                            <Download className='w-4 h-4' />
+                            Download
+                          </>
+                        ) : (
+                          <>
+                            <Clock className='w-4 h-4' />
+                            Pending
+                          </>
+                        )}
+                      </button>
+                    </a>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -1126,7 +1105,7 @@ export default function ResearchWebsite() {
                   title: "Proposal Presentation",
                   description:
                     "Initial project proposal presentation outlining research objectives and methodology",
-                  date: "March 20, 2024",
+                  date: "July 29, 2024",
                   duration: "20 minutes",
                   slides: "15 slides",
                   status: "completed",
@@ -1136,31 +1115,31 @@ export default function ResearchWebsite() {
                   title: "Progress Presentation-1",
                   description:
                     "First progress presentation covering literature review and initial system design",
-                  date: "May 25, 2024",
+                  date: "December 4, 2024",
                   duration: "25 minutes",
                   slides: "22 slides",
                   status: "completed",
-                  audience: "Supervisors & Peers",
+                  audience: "Academic Panel",
                 },
                 {
                   title: "Progress Presentation-2",
                   description:
                     "Second progress presentation with implementation details and preliminary results",
-                  date: "August 20, 2024",
+                  date: "March 19, 2025",
                   duration: "30 minutes",
                   slides: "28 slides",
                   status: "completed",
-                  audience: "Industry Experts",
+                  audience: "Academic Panel",
                 },
                 {
                   title: "Final Presentation",
                   description:
                     "Comprehensive final presentation with complete system demonstration and results",
-                  date: "December 5, 2024",
+                  date: "May 26, 2025",
                   duration: "45 minutes",
                   slides: "35 slides",
                   status: "upcoming",
-                  audience: "Evaluation Panel",
+                  audience: "Academic Panel",
                 },
               ].map((presentation, index) => (
                 <Card
@@ -1268,82 +1247,38 @@ export default function ResearchWebsite() {
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {[
                 {
-                  name: "Dr. Sarah Johnson",
-                  role: "Principal Investigator",
-                  email: "sarah.johnson@university.edu",
-                  expertise: "AI & Machine Learning",
+                  image: "/images/supervisor.jpg",
+                  name: "Dr. Samantha Rajapaksha",
+                  role: "",
+                  email: "",
+                  expertise: "Supervisor",
                   achievements: [
-                    "15+ years in AI research",
-                    "50+ published papers",
-                    "IEEE Fellow",
+                    "Sri Lanka Institute of Information Technology",
                   ],
                   description:
                     "Leading expert in LLM applications with extensive experience in enterprise AI solutions",
                 },
                 {
-                  name: "Michael Chen",
-                  role: "Lead Developer",
-                  email: "michael.chen@university.edu",
-                  expertise: "Multi-Agent Systems",
+                  image: "/images/co_supervisor.jpg",
+                  name: "Dr. Sanvitha Kasthuriarachchi",
+                  role: "",
+                  email: "",
+                  expertise: "Co-Supervisor",
                   achievements: [
-                    "Senior Software Architect",
-                    "Open Source Contributor",
-                    "Tech Conference Speaker",
+                    "Sri Lanka Institute of Information Technology",
                   ],
                   description:
                     "Specialized in distributed systems and agent-based architectures for enterprise applications",
                 },
                 {
-                  name: "Dr. Emily Rodriguez",
-                  role: "Insurance Domain Expert",
-                  email: "emily.rodriguez@university.edu",
-                  expertise: "Motor Insurance Technology",
-                  achievements: [
-                    "20+ years in InsurTech",
-                    "Industry Consultant",
-                    "Patent Holder",
-                  ],
+                  image: "/images/external_supervisor.jpg",
+                  name: "Mr. Lasitha Petthawadu",
+                  role: "",
+                  email: "",
+                  expertise: "External-Supervisor",
+                  achievements: ["Tetranyde (Pvt) Ltd."],
                   description:
                     "Expert in insurance technology and automation with deep industry knowledge",
-                },
-                {
-                  name: "David Kim",
-                  role: "ML Engineer",
-                  email: "david.kim@university.edu",
-                  expertise: "LLM Fine-tuning",
-                  achievements: [
-                    "Google AI Researcher",
-                    "Kaggle Grandmaster",
-                    "ML Competition Winner",
-                  ],
-                  description:
-                    "Expert in large language model optimization, fine-tuning, and deployment strategies",
-                },
-                {
-                  name: "Lisa Wang",
-                  role: "Research Analyst",
-                  email: "lisa.wang@university.edu",
-                  expertise: "Data Analysis & Research",
-                  achievements: [
-                    "PhD in Statistics",
-                    "Research Methodology Expert",
-                    "Data Science Consultant",
-                  ],
-                  description:
-                    "Specialized in performance analysis, statistical modeling, and research methodology",
-                },
-                {
-                  name: "James Thompson",
-                  role: "Systems Architect",
-                  email: "james.thompson@university.edu",
-                  expertise: "Cloud Infrastructure",
-                  achievements: [
-                    "AWS Solutions Architect",
-                    "DevOps Expert",
-                    "Cloud Security Specialist",
-                  ],
-                  description:
-                    "Expert in scalable cloud architecture, DevOps practices, and enterprise infrastructure",
                 },
               ].map((member, index) => (
                 <Card
@@ -1352,7 +1287,110 @@ export default function ResearchWebsite() {
                   <CardContent className='p-6'>
                     <div className='text-center mb-4'>
                       <div className='w-20 h-20 bg-gradient-to-br from-white/20 to-white/10 rounded-full mx-auto mb-4 flex items-center justify-center'>
-                        <Users className='w-8 h-8 text-white' />
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className='w-16 h-16 rounded-full object-cover'
+                        />
+                      </div>
+                      <h3 className='text-xl font-semibold mb-1'>
+                        {member.name}
+                      </h3>
+                      <p className='text-blue-200 font-medium mb-2'>
+                        {member.role}
+                      </p>
+                      <Badge
+                        variant='secondary'
+                        className='mb-3 bg-white/20 text-white border-white/30'>
+                        {member.expertise}
+                      </Badge>
+                    </div>
+                    <p className='text-blue-100 text-sm mb-4 text-center'>
+                      {member.description}
+                    </p>
+                    <div className='space-y-2 mb-4'>
+                      <div className='flex items-center text-blue-100 text-sm'>
+                        <Mail className='w-4 h-4 mr-2 flex-shrink-0' />
+                        <span className='truncate'>{member.email}</span>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className='text-sm font-semibold text-white mb-2'></h4>
+                      <ul className='space-y-1'>
+                        {member.achievements.map((achievement, achIndex) => (
+                          <li
+                            key={achIndex}
+                            className='text-blue-100 text-xs flex items-start'>
+                            <div className='w-1 h-1 bg-blue-300 rounded-full mt-2 mr-2 flex-shrink-0'></div>
+                            {achievement}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <hr className='border-white/30 my-8' />
+            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
+              {[
+                {
+                  image: "/images/team_member_1.jpg",
+                  name: "Panangala P.A.D.S.S",
+                  role: "SE Undergraduate",
+                  email: "it21257568@my.sliit.lk",
+                  expertise: "Group Leader",
+                  achievements: [
+                    "Sri Lanka Institute of Information Technology",
+                  ],
+                  description: "Customer-Estimation-Crosschecking",
+                },
+                {
+                  image: "/images/team_member_2.jpg",
+                  name: " Munasinghe J.R",
+                  role: "SE Undergraduate",
+                  email: "it21258626@my.sliit.lk",
+                  expertise: "Group Member",
+                  achievements: [
+                    "Sri Lanka Institute of Information Technology",
+                  ],
+                  description:
+                    "Customer Risk Prediction & Insurance Document Automation",
+                },
+                {
+                  image: "/images/team_member_3.jpg",
+                  name: "Samarasinghe G.C.S.",
+                  role: "SE Undergraduate",
+                  email: "it21227622@my.sliit.lk",
+                  expertise: "Group Member",
+                  achievements: [
+                    "Sri Lanka Institute of Information Technology",
+                  ],
+                  description: "Claim Process Automation & Fraud Detection",
+                },
+                {
+                  image: "/images/team_member_4.jpg",
+                  name: "Narasinghe N.M.N.N",
+                  role: "SE Undergraduate",
+                  email: "it21259302@my.sliit.lk",
+                  expertise: "Group Member",
+                  achievements: [
+                    "Sri Lanka Institute of Information Technology",
+                  ],
+                  description: "Vehicle Risk Prediction & Premium Adjustment",
+                },
+              ].map((member, index) => (
+                <Card
+                  key={index}
+                  className='bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2'>
+                  <CardContent className='p-6'>
+                    <div className='text-center mb-4'>
+                      <div className='w-20 h-20 bg-gradient-to-br from-white/20 to-white/10 rounded-full mx-auto mb-4 flex items-center justify-center'>
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className='w-16 h-16 rounded-full object-cover'
+                        />
                       </div>
                       <h3 className='text-xl font-semibold mb-1'>
                         {member.name}
@@ -1377,7 +1415,7 @@ export default function ResearchWebsite() {
                     </div>
                     <div>
                       <h4 className='text-sm font-semibold text-white mb-2'>
-                        Key Achievements:
+                        University
                       </h4>
                       <ul className='space-y-1'>
                         {member.achievements.map((achievement, achIndex) => (
@@ -1432,17 +1470,23 @@ export default function ResearchWebsite() {
                             Email
                           </h4>
                           <p className='text-slate-600'>
-                            llm.research@university.edu
+                            it21257568@my.sliit.lk
                           </p>
                           <p className='text-slate-600'>
-                            project.team@university.edu
+                            it21258626@my.sliit.lk
+                          </p>
+                          <p className='text-slate-600'>
+                            it21227622@my.sliit.lk
+                          </p>
+                          <p className='text-slate-600'>
+                            it21259302@my.sliit.lk
                           </p>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
 
-                  <Card className='hover:shadow-md transition-all duration-300'>
+                  {/* <Card className='hover:shadow-md transition-all duration-300'>
                     <CardContent className='p-6'>
                       <div className='flex items-start space-x-4'>
                         <div className='w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center'>
@@ -1457,9 +1501,9 @@ export default function ResearchWebsite() {
                         </div>
                       </div>
                     </CardContent>
-                  </Card>
+                  </Card> */}
 
-                  <Card className='hover:shadow-md transition-all duration-300'>
+                  {/* <Card className='hover:shadow-md transition-all duration-300'>
                     <CardContent className='p-6'>
                       <div className='flex items-start space-x-4'>
                         <div className='w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center'>
@@ -1481,7 +1525,7 @@ export default function ResearchWebsite() {
                         </div>
                       </div>
                     </CardContent>
-                  </Card>
+                  </Card> */}
                 </div>
               </div>
 
@@ -1545,8 +1589,7 @@ export default function ResearchWebsite() {
                   </h4>
                   <p className='text-sm text-blue-700'>
                     We typically respond to inquiries within 24-48 hours during
-                    business days. For urgent matters, please call our direct
-                    phone line.
+                    business days.
                   </p>
                 </div>
               </div>
@@ -1578,9 +1621,9 @@ export default function ResearchWebsite() {
               multi-agent systems
             </p>
             <div className='flex justify-center space-x-6 text-slate-400'>
-              <span>© 2024 Research Team</span>
+              <span>© 24-25J-216 Research Team</span>
               <span>•</span>
-              <span>Faculty of Computing</span>
+              <span>SLIIT Faculty of Computing</span>
               <span>•</span>
               <span>All Rights Reserved</span>
             </div>
