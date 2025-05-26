@@ -192,7 +192,7 @@ export default function ResearchWebsite() {
       date: "2021/02/25",
       type: "PDF",
       groupType: "Group",
-      link: "#",
+      link: "https://drive.google.com/drive/folders/1TdASMvpH3pvCHf7V2jGQjI_quxWAVfML?usp=sharing",
     },
     {
       title: "Project Charter",
@@ -208,7 +208,7 @@ export default function ResearchWebsite() {
       date: "2021/03/22",
       type: "PDF",
       groupType: "Individual",
-      link: "#",
+      link: "https://drive.google.com/drive/folders/1JxoHwQIAwdIm73SjLW5JxhAofD89W-0V?usp=sharing",
     },
     {
       title: "Status Documents I",
@@ -240,7 +240,7 @@ export default function ResearchWebsite() {
       date: "2021/10/13",
       type: "PDF",
       groupType: "Group",
-      link: "#",
+      link: "https://drive.google.com/drive/folders/1T6DaNB9AAzOmocP9ZxHXlNpv2s4wHHce?usp=sharing",
     },
     {
       title: "Poster",
