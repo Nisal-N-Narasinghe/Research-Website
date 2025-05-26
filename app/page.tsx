@@ -480,23 +480,24 @@ export default function ResearchWebsite() {
                       style={{
                         fontSize: "0.75rem",
                         lineHeight: "1.2",
-                        paddingTop: "0.5rem",
-                        
+                        paddingTop: "15px",
+                        listStylePosition: "inside",
+                        color: "#808080",
                       }}
                     >
-                      <li>
+                      <li style={{ marginBottom: "10px" }}>
                         [1] B. Sharan, M. Hassan, V. D. Vani, V. H. Raj, Ginni
                         Nijhawan and P. P. Pawar, “Machine learning-based fraud
                         detection system for insurance claims in IoT
                         environment,” IEEE.
                       </li>
-                      <li>
+                      <li style={{ marginBottom: "10px" }}>
                         [2] S. Mishra, D. Kamal and S. K. K, “Vehicle Damage
                         Identification using Deep Learning Techniques,” in 2024
                         IEEE International Students’ Conference on Electrical,
                         Electronics and Computer Science (SCEECS), 2024.
                       </li>
-                      <li>
+                      <li style={{ marginBottom: "10px" }}>
                         [3] M. Rithik and S. Chokkalingam, “Image based
                         classification for vehicle accident detection and
                         insurance claim using artificial intelligence,” in 2024
@@ -537,6 +538,41 @@ export default function ResearchWebsite() {
                       optimizing personalized premiums and operational
                       efficiency in real-world insurance applications.
                     </p>
+                    <ul
+                      style={{
+                        fontSize: "0.75rem",
+                        lineHeight: "1.2",
+                        paddingTop: "15px",
+                        listStylePosition: "inside",
+                        color: "#808080",
+                      }}
+                    >
+                      <li style={{ marginBottom: "10px" }}>
+                        [1] B. Sharan, M. Hassan, V. D. Vani, V. H. Raj, Ginni
+                        Nijhawan and P. P. Pawar, “Machine learning-based fraud
+                        detection system for insurance claims in IoT
+                        environment,” IEEE.
+                      </li>
+                      <li style={{ marginBottom: "10px" }}>
+                        [2] S. Mishra, D. Kamal and S. K. K, “Vehicle Damage
+                        Identification using Deep Learning Techniques,” in 2024
+                        IEEE International Students’ Conference on Electrical,
+                        Electronics and Computer Science (SCEECS), 2024.
+                      </li>
+                      <li style={{ marginBottom: "10px" }}>
+                        [3] M. Rithik and S. Chokkalingam, “Image based
+                        classification for vehicle accident detection and
+                        insurance claim using artificial intelligence,” in 2024
+                        International Conference on Emerging Systems and
+                        Intelligent Computing (ESIC), 2024.
+                      </li>
+                      <li>
+                        [4] R. Singh, M. P. Ayyar, T. V. S. Pavan, S. Gosain and
+                        R. R. Shah, “Automating car insurance claims using deep
+                        learning techniques,” in 2019 IEEE Fifth International
+                        Conference on Multimedia Big Data (BigMM), 2019.
+                      </li>
+                    </ul>
                   </CardContent>
                 </Card>
 
@@ -564,6 +600,41 @@ export default function ResearchWebsite() {
                       workflows, enhance fraud detection, and streamline the
                       entire vehicle insurance claim process.
                     </p>
+                    <ul
+                      style={{
+                        fontSize: "0.75rem",
+                        lineHeight: "1.2",
+                        paddingTop: "15px",
+                        listStylePosition: "inside",
+                        color: "#808080",
+                      }}
+                    >
+                      <li style={{ marginBottom: "10px" }}>
+                        [1] B. Sharan, M. Hassan, V. D. Vani, V. H. Raj, Ginni
+                        Nijhawan and P. P. Pawar, “Machine learning-based fraud
+                        detection system for insurance claims in IoT
+                        environment,” IEEE.
+                      </li>
+                      <li style={{ marginBottom: "10px" }}>
+                        [2] S. Mishra, D. Kamal and S. K. K, “Vehicle Damage
+                        Identification using Deep Learning Techniques,” in 2024
+                        IEEE International Students’ Conference on Electrical,
+                        Electronics and Computer Science (SCEECS), 2024.
+                      </li>
+                      <li style={{ marginBottom: "10px" }}>
+                        [3] M. Rithik and S. Chokkalingam, “Image based
+                        classification for vehicle accident detection and
+                        insurance claim using artificial intelligence,” in 2024
+                        International Conference on Emerging Systems and
+                        Intelligent Computing (ESIC), 2024.
+                      </li>
+                      <li>
+                        [4] R. Singh, M. P. Ayyar, T. V. S. Pavan, S. Gosain and
+                        R. R. Shah, “Automating car insurance claims using deep
+                        learning techniques,” in 2019 IEEE Fifth International
+                        Conference on Multimedia Big Data (BigMM), 2019.
+                      </li>
+                    </ul>
                   </CardContent>
                 </Card>
 
@@ -591,6 +662,43 @@ export default function ResearchWebsite() {
                       support the development of efficient, transparent, and
                       reliable insurance risk analysis systems.
                     </p>
+                    <ul
+                      style={{
+                        fontSize: "0.75rem",
+                        lineHeight: "1.2",
+                        paddingTop: "15px",
+                        listStylePosition: "inside",
+                        color: "#808080",
+                      }}
+                    >
+                      <li style={{ marginBottom: "10px" }}>
+                        [1] T. N. Mahbub, S. S. Hossain, R. A. Akash, S. M. S.
+                        Reza and Z. Tasnim, ”Implementing Fuzzy Analytical
+                        Hierarchy Process (FAHP) To Measure Malicious Behaviour
+                        of Codes In Smart M,” in 2021 2nd International
+                        Conference on Robotics, Electrical and Signal Processing
+                        Techniques (ICREST), DHAKA, Bangladesh, 2021.
+                      </li>
+                      <li style={{ marginBottom: "10px" }}>
+                        [2] L. Shidong, Z. Bin, L. Teng, L. Gengzhen and S.
+                        Pingyi, ”Research on Risk Classification Based on AHP in
+                        Automobile Insurance,” in 2016 International Conference
+                        on Smart Grid and Electrical Automation (ICSGEA), 2016.
+                      </li>
+                      <li style={{ marginBottom: "10px" }}>
+                        [3] T. Chen and C. Guestrin, ”XGBoost: A Scalable Tree
+                        Boosting System,” in Proc. 22nd ACM SIGKDD Int. Conf.
+                        Knowledge Discovery and Data Mining, San Francisco, CA,
+                        USA, 2016, pp. 785–794.
+                      </li>
+                      <li>
+                        [4] A. S. Yaro, F. Maly, P. Prazak and K. Mal´y,
+                        ”Outlier Detection Perfor mance of a Modified Z-Score
+                        Method in Time-Series RSS Observation With Hybrid Scale
+                        Estimators,” in IEEE Access, vol. 12, pp. 12785 12796,
+                        2024, doi: 10.1109/ACCESS.2024.3356731.
+                      </li>
+                    </ul>
                   </CardContent>
                 </Card>
               </div>
