@@ -280,7 +280,8 @@ export default function ResearchWebsite() {
                     activeSection === item.id
                       ? "bg-blue-900 text-white"
                       : "text-slate-600 hover:text-blue-900 hover:bg-blue-50"
-                  }`}>
+                  }`}
+                >
                   <item.icon className="w-4 h-4 mr-2" />
                   {item.label}
                 </Button>
@@ -292,7 +293,8 @@ export default function ResearchWebsite() {
               variant="ghost"
               size="sm"
               className="lg:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
               {isMenuOpen ? (
                 <X className="w-5 h-5" />
               ) : (
@@ -311,7 +313,8 @@ export default function ResearchWebsite() {
                     variant="ghost"
                     size="sm"
                     onClick={() => scrollToSection(item.id)}
-                    className="justify-start text-slate-600 hover:text-blue-900 hover:bg-blue-50">
+                    className="justify-start text-slate-600 hover:text-blue-900 hover:bg-blue-50"
+                  >
                     <item.icon className="w-4 h-4 mr-2" />
                     {item.label}
                   </Button>
@@ -326,7 +329,8 @@ export default function ResearchWebsite() {
       <section
         id="home"
         className="relative pt-24 pb-16 text-white overflow-hidden"
-        onMouseMove={handleMouseMove}>
+        onMouseMove={handleMouseMove}
+      >
         {/* Background Image Layer */}
         <div
           className="absolute inset-0 blur-md"
@@ -405,7 +409,8 @@ export default function ResearchWebsite() {
               <Button
                 size="lg"
                 className="bg-white text-blue-900 hover:bg-blue-50 transition-all duration-300 transform hover:scale-105"
-                onClick={() => scrollToSection("domain")}>
+                onClick={() => scrollToSection("domain")}
+              >
                 Explore Domain
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
@@ -413,7 +418,8 @@ export default function ResearchWebsite() {
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 bg-black/20 backdrop-blur-sm "
-                onClick={() => scrollToSection("milestones")}>
+                onClick={() => scrollToSection("milestones")}
+              >
                 <Trophy className="w-5 h-5 mr-2" />
                 View Progress
               </Button>
@@ -477,7 +483,8 @@ export default function ResearchWebsite() {
                         paddingTop: "15px",
                         listStylePosition: "inside",
                         color: "#808080",
-                      }}>
+                      }}
+                    >
                       <li style={{ marginBottom: "10px" }}>
                         [1] B. Sharan, M. Hassan, V. D. Vani, V. H. Raj, Ginni
                         Nijhawan and P. P. Pawar, “Machine learning-based fraud
@@ -538,7 +545,8 @@ export default function ResearchWebsite() {
                         paddingTop: "15px",
                         listStylePosition: "inside",
                         color: "#808080",
-                      }}>
+                      }}
+                    >
                       <li style={{ marginBottom: "10px" }}>
                         [1] N. Fernando, A. Kumarage, V. Thiyaganathan, R.
                         Hillary and L. Abeywardhana, ”Automated vehicle
@@ -605,25 +613,24 @@ export default function ResearchWebsite() {
                         paddingTop: "15px",
                         listStylePosition: "inside",
                         color: "#808080",
-                      }}>
+                      }}
+                    >
                       <li style={{ marginBottom: "10px" }}>
-                        [1] B. Sharan, M. Hassan, V. D. Vani, V. H. Raj, Ginni
-                        Nijhawan and P. P. Pawar, “Machine learning-based fraud
-                        detection system for insurance claims in IoT
-                        environment,” IEEE.
+                        [1] L. Rukhsar, W. Bangyal, K. Nisar, and S. Nisar,
+                        "Prediction of Insurance Fraud Detection using Machine
+                        Learning Algorithms," Mehran University Research Journal
+                        of Engineering and Technology, vol. 41, pp. 33–40, Jan.
+                        2022, doi: 10.22581/muet1982.2201.04
                       </li>
                       <li style={{ marginBottom: "10px" }}>
-                        [2] S. Mishra, D. Kamal and S. K. K, “Vehicle Damage
-                        Identification using Deep Learning Techniques,” in 2024
-                        IEEE International Students’ Conference on Electrical,
-                        Electronics and Computer Science (SCEECS), 2024.
+                        [2]A. Abdallah, M. A. Maarof, and A. Zainal, "Fraud
+                        detection system: A survey," Journal of Network and
+                        Computer Applications, vol. 68, pp. 90–113, 2016.
                       </li>
                       <li style={{ marginBottom: "10px" }}>
-                        [3] M. Rithik and S. Chokkalingam, “Image based
-                        classification for vehicle accident detection and
-                        insurance claim using artificial intelligence,” in 2024
-                        International Conference on Emerging Systems and
-                        Intelligent Computing (ESIC), 2024.
+                        [3] S. Schich, "Insurance companies and the financial
+                        crisis," OECD Journal: Financial Market Trends, vol.
+                        2009, no. 2, pp. 123–151, 2010.
                       </li>
                       <li>
                         [4] R. Singh, M. P. Ayyar, T. V. S. Pavan, S. Gosain and
@@ -666,7 +673,8 @@ export default function ResearchWebsite() {
                         paddingTop: "15px",
                         listStylePosition: "inside",
                         color: "#808080",
-                      }}>
+                      }}
+                    >
                       <li style={{ marginBottom: "10px" }}>
                         [1] T. N. Mahbub, S. S. Hossain, R. A. Akash, S. M. S.
                         Reza and Z. Tasnim, ”Implementing Fuzzy Analytical
@@ -802,7 +810,8 @@ export default function ResearchWebsite() {
                 ].map((objective, index) => (
                   <Card
                     key={index}
-                    className="hover:shadow-md transition-all duration-300">
+                    className="hover:shadow-md transition-all duration-300"
+                  >
                     <CardContent className="p-4">
                       <div className="flex items-start space-x-4">
                         <div className="w-8 h-8 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
@@ -913,7 +922,8 @@ export default function ResearchWebsite() {
                 ].map((phase, index) => (
                   <Card
                     key={index}
-                    className="hover:shadow-lg transition-all duration-300">
+                    className="hover:shadow-lg transition-all duration-300"
+                  >
                     <CardHeader className="text-center">
                       <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-xl mb-4">
                         <phase.icon className="w-6 h-6 text-blue-600" />
@@ -927,7 +937,8 @@ export default function ResearchWebsite() {
                         {phase.steps.map((step, stepIndex) => (
                           <li
                             key={stepIndex}
-                            className="flex items-center text-sm text-slate-600">
+                            className="flex items-center text-sm text-slate-600"
+                          >
                             <div className="w-1.5 h-1.5 bg-slate-400 rounded-full mr-2 flex-shrink-0"></div>
                             {step}
                           </li>
@@ -986,7 +997,8 @@ export default function ResearchWebsite() {
                 ].map((tech, index) => (
                   <Card
                     key={index}
-                    className="hover:shadow-lg transition-all duration-300">
+                    className="hover:shadow-lg transition-all duration-300"
+                  >
                     <CardHeader>
                       <div className="inline-flex items-center justify-center w-10 h-10 bg-purple-100 rounded-lg mb-3">
                         <tech.icon className="w-5 h-5 text-purple-600" />
@@ -1001,7 +1013,8 @@ export default function ResearchWebsite() {
                           <Badge
                             key={techIndex}
                             variant="secondary"
-                            className="text-xs">
+                            className="text-xs"
+                          >
                             {technology}
                           </Badge>
                         ))}
@@ -1043,7 +1056,8 @@ export default function ResearchWebsite() {
                     selectedMilestone === key
                       ? "bg-blue-900 text-white"
                       : "text-slate-600 hover:text-blue-900"
-                  }`}>
+                  }`}
+                >
                   {milestone.title}
                 </Button>
               ))}
@@ -1079,7 +1093,8 @@ export default function ResearchWebsite() {
                         ? "secondary"
                         : "outline"
                     }
-                    className="text-lg px-3 py-1">
+                    className="text-lg px-3 py-1"
+                  >
                     {
                       milestones[selectedMilestone as keyof typeof milestones]
                         .marks
@@ -1152,7 +1167,8 @@ export default function ResearchWebsite() {
                   className={`hover:shadow-lg transition-all duration-300 cursor-pointer ${
                     selectedMilestone === key ? "ring-2 ring-blue-500" : ""
                   }`}
-                  onClick={() => setSelectedMilestone(key)}>
+                  onClick={() => setSelectedMilestone(key)}
+                >
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between mb-3">
                       {milestone.status === "completed" ? (
@@ -1180,7 +1196,8 @@ export default function ResearchWebsite() {
                           ? "secondary"
                           : "outline"
                       }
-                      className="text-xs">
+                      className="text-xs"
+                    >
                       {milestone.status.replace("-", " ")}
                     </Badge>
                   </CardContent>
@@ -1211,7 +1228,8 @@ export default function ResearchWebsite() {
               {documents.map((doc, index) => (
                 <div
                   key={index}
-                  className="bg-white shadow-sm rounded-lg border border-slate-200 hover:shadow-md transition p-4 flex flex-col justify-between">
+                  className="bg-white shadow-sm rounded-lg border border-slate-200 hover:shadow-md transition p-4 flex flex-col justify-between"
+                >
                   <div className="flex items-center space-x-2 mb-3">
                     <FileText className="w-5 h-5 text-red-500" />
                     <h2 className="text-lg font-semibold text-slate-800">
@@ -1232,14 +1250,16 @@ export default function ResearchWebsite() {
                     <a
                       href={doc.link}
                       target="_blank"
-                      rel="noopener noreferrer">
+                      rel="noopener noreferrer"
+                    >
                       <button
                         className={`text-sm flex items-center gap-1 ${
                           doc.status === "available"
                             ? "text-emerald-600 hover:underline"
                             : "text-slate-400 cursor-not-allowed"
                         }`}
-                        disabled={doc.status !== "available"}>
+                        disabled={doc.status !== "available"}
+                      >
                         {doc.status === "available" ? (
                           <>
                             <Download className="w-4 h-4" />
@@ -1322,7 +1342,8 @@ export default function ResearchWebsite() {
               ].map((presentation, index) => (
                 <Card
                   key={index}
-                  className="hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                  className="hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                >
                   <CardContent className="p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
@@ -1336,7 +1357,8 @@ export default function ResearchWebsite() {
                                 ? "default"
                                 : "outline"
                             }
-                            className="text-xs">
+                            className="text-xs"
+                          >
                             {presentation.status}
                           </Badge>
                         </div>
@@ -1373,7 +1395,8 @@ export default function ResearchWebsite() {
                                 ? "default"
                                 : "outline"
                             }
-                            disabled={presentation.status === "upcoming"}>
+                            disabled={presentation.status === "upcoming"}
+                          >
                             {presentation.status === "completed" ? (
                               <>
                                 <Download className="w-4 h-4 mr-2" />
@@ -1409,7 +1432,8 @@ export default function ResearchWebsite() {
       {/* About Us Section */}
       <section
         id="about"
-        className="py-16 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white">
+        className="py-16 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white"
+      >
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -1488,7 +1512,8 @@ export default function ResearchWebsite() {
               ].map((member, index) => (
                 <Card
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2">
+                  className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2"
+                >
                   <CardContent className="p-6">
                     <div className="text-center mb-4">
                       <div className="w-20 h-20 bg-gradient-to-br from-white/20 to-white/10 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -1506,7 +1531,8 @@ export default function ResearchWebsite() {
                       </p>
                       <Badge
                         variant="secondary"
-                        className="mb-3 bg-white/20 text-white border-white/30">
+                        className="mb-3 bg-white/20 text-white border-white/30"
+                      >
                         {member.expertise}
                       </Badge>
                     </div>
@@ -1525,7 +1551,8 @@ export default function ResearchWebsite() {
                         {member.achievements.map((achievement, achIndex) => (
                           <li
                             key={achIndex}
-                            className="text-blue-100 text-xs flex items-start">
+                            className="text-blue-100 text-xs flex items-start"
+                          >
                             <div className="w-1 h-1 bg-blue-300 rounded-full mt-2 mr-2 flex-shrink-0"></div>
                             {achievement}
                           </li>
@@ -1536,11 +1563,13 @@ export default function ResearchWebsite() {
                           <a
                             href={member.googleschScholar}
                             target="_blank"
-                            rel="noopener noreferrer">
+                            rel="noopener noreferrer"
+                          >
                             <Button
                               variant="outline"
                               size="sm"
-                              className="text-blue-100 hover:bg-blue-200 hover:text-blue-900">
+                              className="text-blue-100 hover:bg-blue-200 hover:text-blue-900"
+                            >
                               <span className="flex items-center gap-1">
                                 <img
                                   src="/images/google_scholar.png"
@@ -1555,11 +1584,13 @@ export default function ResearchWebsite() {
                           <a
                             href={member.linkedin}
                             target="_blank"
-                            rel="noopener noreferrer">
+                            rel="noopener noreferrer"
+                          >
                             <Button
                               variant="outline"
                               size="sm"
-                              className="text-blue-100 hover:bg-blue-200 hover:text-blue-900">
+                              className="text-blue-100 hover:bg-blue-200 hover:text-blue-900"
+                            >
                               <span className="flex items-center gap-1">
                                 <Linkedin className="w-4 h-4 text-black" />
                               </span>
@@ -1570,11 +1601,13 @@ export default function ResearchWebsite() {
                           <a
                             href={member.researchGate}
                             target="_blank"
-                            rel="noopener noreferrer">
+                            rel="noopener noreferrer"
+                          >
                             <Button
                               variant="outline"
                               size="sm"
-                              className="text-blue-100 hover:bg-blue-200 hover:text-blue-900">
+                              className="text-blue-100 hover:bg-blue-200 hover:text-blue-900"
+                            >
                               <span className="flex items-center gap-1">
                                 <img
                                   src="/images/researchgate.png"
@@ -1642,7 +1675,8 @@ export default function ResearchWebsite() {
               ].map((member, index) => (
                 <Card
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2">
+                  className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2"
+                >
                   <CardContent className="p-6">
                     <div className="text-center mb-4">
                       <div className="w-20 h-20 bg-gradient-to-br from-white/20 to-white/10 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -1660,7 +1694,8 @@ export default function ResearchWebsite() {
                       </p>
                       <Badge
                         variant="secondary"
-                        className="mb-3 bg-white/20 text-white border-white/30">
+                        className="mb-3 bg-white/20 text-white border-white/30"
+                      >
                         {member.expertise}
                       </Badge>
                     </div>
@@ -1681,7 +1716,8 @@ export default function ResearchWebsite() {
                         {member.achievements.map((achievement, achIndex) => (
                           <li
                             key={achIndex}
-                            className="text-blue-100 text-xs flex items-start">
+                            className="text-blue-100 text-xs flex items-start"
+                          >
                             <div className="w-1 h-1 bg-blue-300 rounded-full mt-2 mr-2 flex-shrink-0"></div>
                             {achievement}
                           </li>
@@ -1737,7 +1773,8 @@ export default function ResearchWebsite() {
         <Button
           onClick={scrollToTop}
           className="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-blue-900 hover:bg-blue-800 text-white shadow-lg transition-all duration-300 transform hover:scale-110 z-50"
-          size="sm">
+          size="sm"
+        >
           <ArrowUp className="w-5 h-5" />
         </Button>
       )}
