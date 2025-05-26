@@ -127,7 +127,7 @@ export default function ContactUs() {
                     </div>
                     <div>
                       <h4 className='font-semibold text-blue-900 mb-2'>
-                        Emails
+                        Emails:
                       </h4>
                       <p className='text-slate-600'>it21257568@my.sliit.lk</p>
                       <p className='text-slate-600'>it21258626@my.sliit.lk</p>
