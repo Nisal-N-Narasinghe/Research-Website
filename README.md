@@ -1,6 +1,6 @@
 # SLIIT 4th Year Research Project 
 
-![Project Banner](https://github.com/IT21257568/InnoAInsure-Web-FE/blob/8c881c4ef3a5b90de3166125cd3aeb6561f03434/src/assets/InnoAInsure_Web_Application.png)
+![Project Banner](https://github.com/Nisal-N-Narasinghe/Research-Website/blob/development/public/images/webbanner.png)
 
 ## Project Description
 This website serves as the official frontend interface and documentation portal for our undergraduate research project:
