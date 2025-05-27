@@ -1,4 +1,4 @@
-# SLIIT 4th Year Research Project 
+# SLIIT 4th Year Research WEB 
 
 ![Project Banner](https://github.com/Nisal-N-Narasinghe/Research-Website/blob/development/public/images/webbanner.png)
 
